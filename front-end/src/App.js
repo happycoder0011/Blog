@@ -1,8 +1,22 @@
 import React from 'react';
-import Home from "./components/screens/home";
+import {BrowserRouter,Route, Router} from 'react-router-dom';
+import Home from "./components/screens/Home";
+import Category from "./components/screens/Category";
+import Single from "./components/screens/Single";
+
 function App() {
   return (
-    <Home/>
+    <BrowserRouter>
+      <Route exact path="/">
+        <Home/>
+      </Route>
+      <Route path="/category">
+        <Category/>
+      </Route>
+      <Route path="/singlepost">
+        <Single/>
+      </Route>
+    </BrowserRouter>
   );
   }
 
